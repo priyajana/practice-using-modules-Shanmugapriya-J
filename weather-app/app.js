@@ -5,6 +5,7 @@ Weather Info as JSON obj.
 To run : node app.js --city=location
 https://www.tutorialspoint.com/node-js-chalk-module
 // https://stackoverflow.com/questions/70309135/chalk-error-err-require-esm-require-of-es-module
+https://idemax.medium.com/deep-dive-into-yargs-building-command-line-tools-in-node-js-1838365c1738
 ***********************************************************/
 
 //module for building command line apps
@@ -143,6 +144,7 @@ yargs(hideBin(process.argv))
 
 */
 // Uses yargs to give user input as CLI option like --city=cityname
+//hideBin is a shorthand for process.argv.slice(2).
 const argv = yargs(hideBin(process.argv))
 .option('city',{type:'string',demandOption:true}).argv;
 
