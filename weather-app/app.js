@@ -2,7 +2,7 @@
 https://www.geeksforgeeks.org/node-js-yargs-module/
 https://github.com/octipus/Current-Weather-Application/blob/master/weather.json
 Weather Info as JSON obj.
-To run : node app.js WeatherInfo [city]
+To run : node app.js --city=location
 https://www.tutorialspoint.com/node-js-chalk-module
 // https://stackoverflow.com/questions/70309135/chalk-error-err-require-esm-require-of-es-module
 ***********************************************************/
@@ -150,8 +150,24 @@ printWeather(result);
 
 /*A short written response commented within the code, addressing:
 ○ The purpose of package.json in managing dependencies.
+	The package.json file acts as the central place where developers can place the external or internal package
+	dependencies to successfully run the project. This helps in collaboration when multiple developers work in project 
+	development and managing package dependencies will be hard if we do not maintain a single file to track.
+
 ○ Why node_modules should not be included in version control.
+	https://www.quora.com/Should-node_modules-be-gitignored
+	The node_modules folder is relatively large folder with all the needed dependency packages, it becomes tedious if we are
+	to commit this folder to version control.Different operating systems will have different dependencies so it may create problem when 
+	different developers are working on the same project.
+
+
 ○ How npm install reinstalls dependencies and its importance in
-collaborative projects.*/
+collaborative projects.
+	Even if we delete the node_modules folder that contains all the installed packages, as we run the application, 
+	node looks for the package.json first and then re-installs all the needed packages before proceeding run the program source code.
+	This helps collaboration easier as its not necessary to package the dependencies along with the application source code.
+
+*/
+
 
 
