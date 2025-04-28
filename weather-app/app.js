@@ -15,7 +15,7 @@ const { hideBin } = require('yargs/helpers');
 const chalk = require('chalk');
 
 
-
+// Dummy hard-coded weather information for displaying in the console.
 let weather_info =
 {
 	"weather": [
@@ -103,6 +103,8 @@ let weather_info =
 	]
 }
 
+// Checks if the city user input is available in the weather_info object.
+// If yes, then returns the corresponding city weather info. Else, returns City info unavailable.
 function fetchWeatherDetails(city)
 {
 	
@@ -121,6 +123,7 @@ function fetchWeatherDetails(city)
        
 }
 
+// With the parameter cityInfo, this function prints the city weather in color code using the chalk module.
 function printWeather(cityInfo)
 {
 	console.log(chalk.green(("Weather Condition")));
