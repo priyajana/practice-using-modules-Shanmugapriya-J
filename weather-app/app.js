@@ -150,6 +150,21 @@ let result = fetchWeatherDetails(argv.city);
 
 printWeather(result);
 
+/**
+ * OUTPUT
+ * 
+ * 
+ * $ node app.js --city=london
+Weather Condition
+--------------------
+cityId: 1
+cityName: London
+currentConditions: Cloud
+temperature: 25
+windSpeed: 27
+windDirection: Easterly
+windChillFactor: 11
+ */
 
 /*A short written response commented within the code, addressing:
 ○ The purpose of package.json in managing dependencies.
